@@ -19,13 +19,20 @@ body {
 .tasks {
   &__item {
     background: #fff;
+    padding: 1rem;
+    border-radius: 2px;
+    border-right: 3px solid;
+
+    h3 {
+      margin: 0;
+    }
 
     &--done {
-      background: #47db5b;
+      border-color: #2afd00;
     }
 
     &--inprogress {
-      background: #ffd35b;
+      border-color: #ffd35b;
     }
   }
 }
