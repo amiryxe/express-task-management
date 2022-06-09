@@ -4,6 +4,11 @@ body {
   background: #eee;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .tasks {
   &__item {
     background: #fff;

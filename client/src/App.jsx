@@ -1,9 +1,11 @@
 import './App.scss'
 
+import TaskList from './components/Tasks/TaskList'
+
 function App() {
   return (
-    <div className="App">
-      hi
+    <div className="container">
+      <TaskList />
     </div>
   )
 }
