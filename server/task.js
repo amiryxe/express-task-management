@@ -1,5 +1,3 @@
-import util from 'util'
-
 import DB from './db.js'
 
 export default class Task {
