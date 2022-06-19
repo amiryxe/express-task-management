@@ -1,14 +1,16 @@
 import CheckFill from '../../assets/images/check-fill.svg'
 
-export default function TaskItem() {
+export default function TaskItem(data) {
+    const { title, completed } = data.data;
+
     return (
         <div className="tasks__item tasks__item--done">
             <button>
                 <img src={CheckFill} alt="" />
             </button>
 
-            <h3>task title</h3>
-            <span>(completed)</span>
+            <h3>{title}</h3>
+            <span>({completed ? 'completed' : 'in progress'})</span>
         </div>
     )
 }
