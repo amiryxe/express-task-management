@@ -4,6 +4,9 @@ export default function TaskList() {
     return (
         <>
             <TaskItem />
+            <TaskItem />
+            <TaskItem />
+            <TaskItem />
         </>
     )
 }
