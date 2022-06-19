@@ -6,7 +6,7 @@ export default function TaskItem() {
                 <span>(completed)</span>
             </header>
             
-            <button>toggle</button>
+            <button>✔</button>
         </div>
     )
 }
