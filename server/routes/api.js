@@ -6,7 +6,6 @@ const api = express.Router()
 
 api.get('/tasks', (req, res) => {
     const tasks = Task.getAllTasks(true)
-    console.log(tasks);
 
     if (tasks.length) {
         res.send(JSON.stringify(tasks))
