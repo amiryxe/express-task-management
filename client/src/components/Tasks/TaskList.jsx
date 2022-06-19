@@ -2,15 +2,14 @@ import TaskItem from "./TaskItem"
 import { useGetTasksQuery } from "../../services/api"
 
 export default function TaskList() {
-    const {data, isFetching} = useGetTasksQuery()
-    console.log(data);
+    const {data = [], isFetching} = useGetTasksQuery()
 
     return (
         <>
-            <TaskItem />
-            <TaskItem />
-            <TaskItem />
-            <TaskItem />
+            {
+                isFetching ? 'loading' :
+                data.map(item => <TaskItem key={item.id} data={item} />)
+            }
         </>
     )
 }
