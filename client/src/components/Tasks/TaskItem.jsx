@@ -9,7 +9,7 @@ export default function TaskItem() {
             </header>
             
             <button>
-                <img src={CheckFill} alt="" srcset="" />
+                <img src={CheckFill} alt="" />
             </button>
         </div>
     )
