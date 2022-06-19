@@ -1,3 +1,5 @@
+import CheckFill from '../../assets/images/check-fill.svg'
+
 export default function TaskItem() {
     return (
         <div className="tasks__item tasks__item--done">
@@ -6,7 +8,9 @@ export default function TaskItem() {
                 <span>(completed)</span>
             </header>
             
-            <button>✔</button>
+            <button>
+                <img src={CheckFill} alt="" srcset="" />
+            </button>
         </div>
     )
 }

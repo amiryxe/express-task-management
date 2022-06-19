@@ -1,8 +1,7 @@
 import express from 'express'
+import 'dotenv/config'
 
 import api from './routes/api.js'
-
-import 'dotenv/config'
 
 const app = express()
 
