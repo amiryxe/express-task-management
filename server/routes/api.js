@@ -25,7 +25,7 @@ api.post('/tasks', (req, res) => {
     try {
         const task = new Task(req.body.title, req.body.completed)
         task.save()
-        res.send(task)
+        res.send(`task ${task.title} created`)
     } catch (err) {
         res.status(400).send(err.message)
     }
