@@ -1,19 +1,30 @@
 export default function AddTask() {
-    return (
-        <form className="tasks__add">
-            <input type="text" />
+  const submitHandler = (e) => {
+    e.preventDefault()
 
-            <label>
-                <input type="radio" name="status" value={true} id="" />
-                Completed
-            </label>
+    console.log({
+      title: e.target.title.value,
+      completed: Boolean(e.target.completed.value),
+    })
 
-            <label>
-                <input type="radio" name="status" value={false} id="" />
-                in progress
-            </label>
-            
-            <button>Add task</button>
-        </form>
-    )
+    e.target.reset()
+  }
+
+  return (
+    <form className="tasks__add" onSubmit={submitHandler}>
+      <input type="text" name="title" />
+
+      <label>
+        <input type="radio" name="completed" value="1" id="" />
+        Completed
+      </label>
+
+      <label>
+        <input type="radio" name="completed" value="" id="" />
+        in progress
+      </label>
+
+      <button>Add task</button>
+    </form>
+  )
 }
