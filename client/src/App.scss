@@ -15,8 +15,18 @@ h6 {
 }
 
 .header {
+  margin-bottom: 3rem;
+
   h1 {
     font-weight: 100 !important;
+    margin-bottom: 0;
+    color: #394553;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 300;
+    color: #888;
   }
 }
 
