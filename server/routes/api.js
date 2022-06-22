@@ -6,7 +6,7 @@ const api = express.Router()
 
 api.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Accept')
+    res.setHeader('Access-Control-Allow-Headers', '*')
     res.setHeader('Content-Type', 'application/json')
     next()
 })
@@ -30,7 +30,5 @@ api.route('/tasks')
             res.status(400).send(err.message)
         }
     })
-
-
 
 export default api

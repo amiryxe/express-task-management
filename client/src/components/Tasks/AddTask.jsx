@@ -1,4 +1,8 @@
+import { useAddTaskMutation } from "../../services/api"
+
 export default function AddTask() {
+  const [addTask, { isLoading, isSuccess, error }] = useAddTaskMutation()
+
   const submitHandler = async (e) => {
     e.preventDefault()
 
@@ -7,14 +11,7 @@ export default function AddTask() {
       completed: Boolean(e.target.completed.value),
     }
 
-    await fetch("http://localhost:5000/api/tasks", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // 'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: JSON.stringify(data),
-    })
+    addTask(data)
 
     e.target.reset()
   }
