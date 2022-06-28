@@ -20,15 +20,17 @@ export default function AddTask() {
     <form className="tasks__add" onSubmit={submitHandler}>
       <input type="text" name="title" placeholder="Enter task title..." />
 
-      <label>
-        <input type="radio" name="completed" value="1" id="" />
-        Completed
-      </label>
+      <div className="tasks__status">
+        <label>
+          <input type="radio" name="completed" value="1" id="" />
+          Completed
+        </label>
 
-      <label>
-        <input type="radio" name="completed" value="" id="" />
-        in progress
-      </label>
+        <label>
+          <input type="radio" name="completed" value="" id="" />
+          in progress
+        </label>
+      </div>
 
       <button>Add task</button>
     </form>
