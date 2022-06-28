@@ -76,5 +76,14 @@ h6 {
 
   &__add {
     margin-bottom: 2rem;
+
+    input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      font-weight: 100;
+      font-family: inherit;
+    }
   }
 }
