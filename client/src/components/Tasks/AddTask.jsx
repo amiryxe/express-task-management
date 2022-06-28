@@ -18,7 +18,7 @@ export default function AddTask() {
 
   return (
     <form className="tasks__add" onSubmit={submitHandler}>
-      <input type="text" name="title" />
+      <input type="text" name="title" placeholder="Enter task title..." />
 
       <label>
         <input type="radio" name="completed" value="1" id="" />
