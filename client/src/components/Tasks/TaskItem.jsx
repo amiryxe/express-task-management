@@ -1,4 +1,5 @@
 import CheckFill from "../../assets/images/check-fill.svg"
+import CheckUnFill from "../../assets/images/check-unfill.svg"
 
 export default function TaskItem(data) {
   const { title, completed } = data.data
@@ -10,7 +11,7 @@ export default function TaskItem(data) {
       }`}
     >
       <button>
-        <img src={CheckFill} alt="" />
+        <img src={completed ? CheckFill : CheckUnFill} alt="" />
       </button>
 
       <h3>{title}</h3>
