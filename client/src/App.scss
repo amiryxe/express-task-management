@@ -47,6 +47,13 @@ h6 {
     margin-bottom: 2rem;
     position: relative;
 
+    span {
+      font-style: italic;
+      font-weight: 100;
+      font-size: 0.7rem;
+      color: #555;
+    }
+
     button {
       border: none;
       border-radius: 5px;
