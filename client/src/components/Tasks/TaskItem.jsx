@@ -2,7 +2,11 @@ import CheckFill from "../../assets/images/check-fill.svg"
 import CheckUnFill from "../../assets/images/check-unfill.svg"
 
 export default function TaskItem(data) {
-  const { title, completed } = data.data
+  const { id, title, completed } = data.data
+
+  const updateStatusHandler = () => {
+    console.log(id)
+  }
 
   return (
     <div
@@ -10,7 +14,7 @@ export default function TaskItem(data) {
         completed ? "tasks__item--done" : "tasks__item--inprogress"
       }`}
     >
-      <button>
+      <button onClick={updateStatusHandler}>
         <img src={completed ? CheckFill : CheckUnFill} alt="" />
       </button>
 
