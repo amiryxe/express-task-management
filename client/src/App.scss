@@ -101,8 +101,12 @@ h6 {
     @media screen and (max-width: 767px) {
       display: block;
 
-      input {
+      input[type="text"] {
         width: calc(100% - 1rem);
+      }
+
+      .tasks__status {
+        margin: 1rem 0;
       }
     }
 
