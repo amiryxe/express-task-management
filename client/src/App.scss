@@ -98,6 +98,14 @@ h6 {
       font-family: inherit;
     }
 
+    @media screen and (max-width: 767px) {
+      display: block;
+
+      input {
+        width: calc(100% - 1rem);
+      }
+    }
+
     button {
       margin-left: auto;
       background: #147500;
