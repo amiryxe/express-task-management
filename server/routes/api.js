@@ -1,6 +1,7 @@
 import express from 'express'
 
 import Task from '../task.js'
+import DB from '../db.js'
 
 const api = express.Router()
 
@@ -29,6 +30,12 @@ api.route('/tasks')
         } catch (err) {
             res.status(400).send(err.message)
         }
+    })
+
+api.route('/reset-db')
+    .get((req, res) => {
+        DB.resetDB()
+        res.send('db reset successfully')
     })
 
 export default api
